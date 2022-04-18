@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="b1" class="com.spr.MyMessage" scope="prototype">
+
+<property name="message" value="Welcome to all"/>
+</bean>
+
+<bean id="p" class="com.spr.Person">
+<constructor-arg value="Pavani"/>
+</bean>
+<bean id="adr" class="com.spr.Address">
+<property name="drno" value="12-135"/>
+<property name="city" value="hyderabad"/>
+<property name="state" value="Telangana"/>
+</bean>
+<bean id="emp" class="com.spr.Employee">
+<property name="ename" value="Arjun"/>
+<property name="empAddr" ref="adr"/>
+</bean>
+</beans>
